@@ -1,0 +1,216 @@
+body {
+  background-color: rgb(25, 25, 25);
+  background-image: url('image1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 30px 0 10px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #a8e9f1;
+  -webkit-text-stroke: 1px #134c58;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #f7f57d;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.5px #7a6f0c;
+}
+* {
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
+
+/* Create button container effect */
+body > .move-button {
+  margin-bottom: 20px;
+}
+nav {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  
+    padding: 8px 20px;
+    border-radius: 12px;
+    background: rgba(10,25,30,0.45);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    gap: 14px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    display: inline-block;
+    font-weight: 600;
+    width: 100%;
+    max-width: 220px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    transition: background-color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.12);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    transform: translateY(-3px) scale(1.01);
+    text-decoration: none;
+}
+
+/* Small helper to ensure nav links don't stretch too small */
+@media (max-width: 520px) {
+    nav a { max-width: none; padding: 8px 12px; }
+    nav ul { gap: 10px; }
+}
+
+.move-icon {
+  height: 50px;
+  transition: transform 0.2s ease;
+}
+
+.move-button {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 15px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.move-button:hover {
+  transform: translateY(-8px) scale(1.08);
+  background: linear-gradient(135deg, #2d3561 0%, #4a5db8 100%);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 14px 28px rgba(74, 93, 184, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.move-button:active {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(74, 93, 184, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.move-button:hover .move-icon {
+  transform: scale(1.15);
+}
+
+.result {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 50px;
+  min-height: 35px;
+  animation: slideInResult 0.4s ease-out;
+  color: #f7f57d;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.js-moves {
+  font-size: 18px;
+  margin-top: 30px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.score {
+  margin-top: 50px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  border-radius: 12px;
+  border-left: 4px solid #f7f57d;
+  backdrop-filter: blur(4px);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reset-score-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reset-score-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(135deg, #ff7b7b, #ff5a5a);
+}
+
+.reset-score-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+}
+
+@keyframes slideInResult {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
