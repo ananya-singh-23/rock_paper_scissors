@@ -44,6 +44,7 @@ function playGame(playerMove) {
     score.wins += 1;
   } else if (result === 'You lose.') {
     score.losses += 1;
+    score.wins -= 1;
   } else if (result === 'Tie.') {
     score.ties += 1;
   }
