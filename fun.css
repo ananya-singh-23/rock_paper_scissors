@@ -43,7 +43,8 @@ h2 {
   gap: 26px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   margin: 6px 0 18px;
 }
 

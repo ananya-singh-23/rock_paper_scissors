@@ -19,18 +19,23 @@
     </header>
     <h1>Rock Paper Scissors</h1>
     <h2>Fun Mode</h2>
-
     <div class="moves">
-      <button type="button" data-move="Rock" onclick="playGame('rock')" class="move-button" aria-label="Rock">
-        <img src="rock-emoji.png" class="move-icon" alt="rock">
+      <button onclick="
+        playGame('rock');
+      " class="move-button">
+        <img src="rock-emoji.png" class="move-icon">
       </button>
 
-      <button type="button" data-move="Paper" onclick="playGame('paper')" class="move-button" aria-label="Paper">
-        <img src="paper-emoji.png" class="move-icon" alt="paper">
+      <button onclick="
+        playGame('paper');
+      " class="move-button">
+        <img src="paper-emoji.png" class="move-icon">
       </button>
 
-      <button type="button" data-move="Scissors" onclick="playGame('scissors')" class="move-button" aria-label="Scissors">
-        <img src="scissors-emoji.png" class="move-icon" alt="scissors">
+      <button onclick="
+        playGame('scissors');
+      " class="move-button">
+        <img src="scissors-emoji.png" class="move-icon">
       </button>
     </div>
 
