@@ -15,8 +15,8 @@ A dynamic and engaging JavaScript implementation of the classic hand game, built
 
 ### 2. Fun Mode
 * *The High-Energy Twist:* Experience an enhanced version of the game with extra excitement.
-* *Unique Mechanics:* Features instead of fingers natural figures are their and 3 times undo option would be available.
-* *Unpredictable Fun:* Fast-paced gameplay designed to keep you on your toes.
+* *Unique Mechanics:* Features instead of fingers natural figures are their and when you lose -1 will be done
+* Fast-paced gameplay designed to keep you on your toes.
 
 ---
 
